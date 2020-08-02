@@ -11,6 +11,7 @@
 		5B65307E1AFB933B009D7775 /* SZTextViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B65307D1AFB933B009D7775 /* SZTextViewTests.m */; };
 		5B6530891AFB938A009D7775 /* SZTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B6530871AFB938A009D7775 /* SZTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B65308A1AFB938A009D7775 /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6530881AFB938A009D7775 /* SZTextView.m */; };
+		68B4D7B924D6F2E5003FF3DC /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4D7B824D6F2E5003FF3DC /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		5B6530871AFB938A009D7775 /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SZTextView.h; path = Classes/SZTextView.h; sourceTree = SOURCE_ROOT; };
 		5B6530881AFB938A009D7775 /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SZTextView.m; path = Classes/SZTextView.m; sourceTree = SOURCE_ROOT; };
 		5B65308B1AFB9441009D7775 /* SZTextViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SZTextViewTests-Info.plist"; sourceTree = "<group>"; };
+		68B4D7B824D6F2E5003FF3DC /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		5B6530611AFB933B009D7775 = {
 			isa = PBXGroup;
 			children = (
+				68B4D7B824D6F2E5003FF3DC /* Package.swift */,
 				5B65306D1AFB933B009D7775 /* SZTextView */,
 				5B65307A1AFB933B009D7775 /* SZTextViewTests */,
 				5B65306C1AFB933B009D7775 /* Products */,
@@ -165,6 +168,7 @@
 				TargetAttributes = {
 					5B65306A1AFB933B009D7775 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 1160;
 					};
 					5B6530751AFB933B009D7775 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -176,6 +180,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 5B6530611AFB933B009D7775;
@@ -211,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68B4D7B924D6F2E5003FF3DC /* Package.swift in Sources */,
 				5B65308A1AFB938A009D7775 /* SZTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -317,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -330,7 +336,8 @@
 		5B6530821AFB933B009D7775 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -339,16 +346,20 @@
 				INFOPLIST_FILE = SZTextView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.glaszig.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SZTextView;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		5B6530831AFB933B009D7775 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -357,15 +368,18 @@
 				INFOPLIST_FILE = SZTextView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.glaszig.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SZTextView;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		5B6530851AFB933B009D7775 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -379,6 +393,7 @@
 		5B6530861AFB933B009D7775 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "SZTextViewTests/SZTextViewTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
